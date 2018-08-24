@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <script src="/js/myscripts.js"></script>
+  <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+
+
+  <body>
+
+
+  <!-- Header -->
+  <div class="underline">
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+        <a><img src="/images/nowhitebg3.png" alt="Los" class="w3-bar-item"></a>
+        <a href="http://localhost:3000" class="w3-bar-item w3-button w3-hover-black">Home</a>
+        <a href="http://localhost:3000/Wordmysteries" class="w3-bar-item w3-button w3-hover-blue" >Word Mysteries</a>
+          <a href="http://localhost:3000/Comics" class="w3-bar-item w3-button w3-hover-red">Comics</a>
+<!--           <a href="http://localhost:3000/Products" class="w3-bar-item w3-button w3-hover-yellow">Products</a>
+ -->          <!-- <a href="#contact" class="w3-bar-item w3-button w3-hover-indigo">Blogs/News</a> -->
+
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+            {{#if user}}
+            <a href="/users/logout" class="w3-bar-item w3-button w3-hover-green">Logout</a>
+            {{else}}
+            <a href="/users/register" class="w3-bar-item w3-button w3-hover-green">Register</a>
+            <a href="/users/login" class="w3-bar-item w3-button w3-hover-green">Sign In</a>
+            {{/if}}
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  <!-- <div class="underline">
+  <div class="firstimg">
+  <img src="/images/nowhitebg3.png" alt="Los">
+  </div>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/wordmysteries">Word Mysteries</a></li>
+    <li><a href="#comics">Comics</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#News">Blogs/News</a></li>
+    {{#if user}}
+    <li style="float:right"><a class="active" href="/users/logout">Logout</a></li>
+    {{else}}
+      <div class="dropdown">
+        <li style="float:right"><a class="active" href="/users/login">Sign In</a></li>
+          <div class="dropdown-content">
+        <li style="float:right"><a class="active" href="/users/register">Register</a></li>
+          </div>
+      </div>
+    {{/if}}
+  </ul>
+  </div> -->
+
+  <!-- slidebar -->
+  <br/>
+
+  {{#if success_msg}}
+    <div class="alert alert-success">{{success_msg}}</div>
+  {{/if}}
+
+  {{#if error_msg}}
+    <div class="alert alert-danger">{{error_msg}}</div>
+  {{/if}}
+
+  {{#if error}}
+    <div class="alert alert-danger">{{error}}</div>
+  {{/if}}
+
+
+    {{{body}}}
+
+
+  <br/> <br/> <br/> <br/> <br/>
+  <br/> <br/> <br/> <br/> <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <br/>
+  <br/>
+  <br/
+
+
+
+  <!-- Footer -->
+  <footer>
+      <div class="buttom">
+
+
+            <div class="footericons">
+               <i class="fa fa-facebook-official"></i>
+               <i class="fa fa-instagram"></i>
+               <i class="fa fa-snapchat"></i>
+               <i class="fa fa-pinterest-p"></i>
+               <i class="fa fa-twitter"></i>
+               <i class="fa fa-linkedin"></i>
+
+                <p> <i class="fa fa-copyright"></i> Truths & Mysteries <a href="#"
+               title="W3.CSS" target="_blank" class="w3-hover-text-green">2018</a></p>
+            </div>
+      </div>
+  </footer>
+
+  <script>
+
+  <!-- script one -->
+
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    x[slideIndex-1].style.display = "block";
+  }
+
+  <!-- Script two -->
+
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>

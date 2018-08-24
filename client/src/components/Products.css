@@ -1,0 +1,63 @@
+/* The beginning of the Form */
+.myform {
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.formField{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+
+.myButton{
+  width: 100%;
+  background-color: #00b894;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.commentpost {
+  width: 95%;
+  margin-left: 0px;
+}
+
+.myList {
+  list-style: none;
+}
+
+.myListButton {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  border-radius: 7px;
+  border: 1px solid;
+  margin: 3px 5px;
+}
+
+
+/* The End of the Form */
+
+
+.style5 {
+  width: "94%";
+  margin: "auto";
+  background-color: yellow;
+}
+
+
+.imagery {
+  max-width:"60%";
+  float: "left";
+}

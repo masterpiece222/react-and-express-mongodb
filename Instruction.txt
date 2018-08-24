@@ -1,0 +1,20 @@
+1. you will need a nodejs installed on the pc to launch this code.
+
+2. Once nodejs is install. go to command prompt.
+
+3. go to the imageload folder through the command prompt.
+
+4. type 'npm install' on the website and login folder.
+
+5. once completed. type 'npm start'
+
+
+6. go to localhost:5000 to view the page.
+
+7. open another command prompt and go to the client folder in the website and login page folder.
+
+8. type 'npm install'
+
+9. once complete, type 'npm start'
+
+10. go to localhost:3000 to view the page.
